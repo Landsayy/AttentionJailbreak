@@ -17,9 +17,8 @@ Our method achieves **94.4% attack success rate** on Qwen-VL (vs 68.8% baseline)
 
 This work builds upon and extends [Visual Adversarial Examples Jailbreak Large Language Models](https://github.com/Unispac/Visual-Adversarial-Examples-Jailbreak-Large-Language-Models) by [@Unispac](https://github.com/Unispac), which serves as our baseline. We thank the authors for their pioneering work on visual adversarial attacks against VLMs.
 
-<p align="center">
-  <img src="../assets/method.png" width="85%" alt="Method Overview">
-</p>
+<p align="center"><img src="assets/method.png" width="85%"></p>
+
 
 ## Key Results
 
