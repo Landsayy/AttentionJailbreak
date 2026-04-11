@@ -13,10 +13,6 @@ This repository contains the official implementation of **Attention-Guided Visua
 
 Our method achieves **94.4% attack success rate** on Qwen-VL (vs 68.8% baseline) by directly manipulating attention patterns rather than overpowering the model's safety alignment. The key insight is that LVLMs continuously retrieve safety instructions through attention, and this process can be circumvented through adversarial attention hijacking.
 
-## Acknowledgements
-
-This work builds upon and extends [Visual Adversarial Examples Jailbreak Large Language Models](https://github.com/Unispac/Visual-Adversarial-Examples-Jailbreak-Large-Language-Models) by [@Unispac](https://github.com/Unispac), which serves as our baseline. We thank the authors for their pioneering work on visual adversarial attacks against VLMs.
-
 <p align="center"><img src="assets/method.png" width="85%"></p>
 
 
@@ -177,6 +173,11 @@ AttentionJailbreak/
 | `--alpha_suppress` | 10.0 | Weight for suppressing system attention |
 | `--beta_amplify` | 5.0 | Weight for amplifying image attention |
 | `--attn_layers` | last-6 | Target attention layers |
+
+## Acknowledgements
+
+This work builds upon and extends [Visual Adversarial Examples Jailbreak Large Language Models](https://github.com/Unispac/Visual-Adversarial-Examples-Jailbreak-Large-Language-Models) by [@Unispac](https://github.com/Unispac), which serves as our baseline. We thank the authors for their pioneering work on visual adversarial attacks against VLMs.
+
 
 ## Citation
 
