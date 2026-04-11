@@ -4,12 +4,6 @@
 
 **ACL 2026**
 
-<div align="center">
-
-[![Paper](https://img.shields.io/badge/arXiv-2025.xxxxx-b31b1b.svg)](https://arxiv.org/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
-
-</div>
 
 ---
 
@@ -19,6 +13,10 @@ This repository contains the official implementation of **Attention-Guided Visua
 
 Our method achieves **94.4% attack success rate** on Qwen-VL (vs 68.8% baseline) by directly manipulating attention patterns rather than overpowering the model's safety alignment. The key insight is that LVLMs continuously retrieve safety instructions through attention, and this process can be circumvented through adversarial attention hijacking.
 
+## Acknowledgements
+
+This work builds upon and extends [Visual Adversarial Examples Jailbreak Large Language Models](https://github.com/Unispac/Visual-Adversarial-Examples-Jailbreak-Large-Language-Models) by [@Unispac](https://github.com/Unispac), which serves as our baseline. We thank the authors for their pioneering work on visual adversarial attacks against VLMs.
+
 <p align="center">
   <img src="../assets/method.png" width="85%" alt="Method Overview">
 </p>
@@ -27,9 +25,9 @@ Our method achieves **94.4% attack success rate** on Qwen-VL (vs 68.8% baseline)
 
 | Model | AdvBench | HarmBench | JailbreakBench | StrongREJECT |
 |:------|:--------:|:---------:|:--------------:|:------------:|
-| LLaVA-1.5-7B | 94.4% | 87.5% | 94.0% | 79.2% |
-| Qwen-VL-Chat | 95.6% | 85.0% | 93.0% | 76.2% |
-| InternVL2-8B | 95.5% | 92.0% | 92.0% | 90.4% |
+| Qwen-VL-Chat | 94.4% | 95.5% | 90.4% | 92.0% |
+| LLaVA-1.5-7B | 77.5% | 78.0% | 84.0% | 84.0% |
+| InternVL2-8B | 18.3% | 17.5% | 19.0% | 15.3% |
 
 > Attack Success Rate (ASR) measured by Llama Guard 3 safety classifier.
 
@@ -194,4 +192,4 @@ AttentionJailbreak/
 
 ## Disclaimer
 
-This repository is released for **academic research purposes only**. The adversarial techniques demonstrated here are intended to advance understanding of VLM safety vulnerabilities and to motivate stronger defenses. **Any misuse is strictly prohibited.**
+This repository is released for **academic research purposes only**. The adversarial techniques demonstrated here are intended to advance understanding of VLM safety vulnerabilities and to motivate stronger defenses. Any misuse is strictly prohibited.
