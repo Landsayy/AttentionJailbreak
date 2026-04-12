@@ -1,18 +1,7 @@
 #!/usr/bin/env python3
 """
-Attention-Guided Visual Jailbreaking (Push-Pull Attack)
-ACL 2026
-
 This module implements the Push-Pull attention loss for adversarial image
-generation against LVLMs. The attack works by:
-1. SUPPRESS: Reducing attention from generated tokens to system prompt tokens
-2. AMPLIFY: Increasing attention from generated tokens to image tokens
-
-This creates a "safety blindness" effect where the model fails to retrieve
-its safety instructions, rather than explicitly overriding them.
-
-Paper: "Seeing No Evil: Blinding Large Vision-Language Models to Safety
-        Instructions via Adversarial Attention Hijacking"
+generation against LVLMs. 
 """
 
 import argparse
