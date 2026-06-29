@@ -1,7 +1,7 @@
 
 <div align="center">
 
-# 🙈 Seeing No Evil: Blinding Large Vision-Language Models to Safety Instructions via Adversarial Attention Hijacking
+# Seeing No Evil: Blinding Large Vision-Language Models to Safety Instructions via Adversarial Attention Hijacking
 
 
 [![arXiv](https://img.shields.io/badge/arXiv-2604.10299-b31b1b.svg)](https://arxiv.org/abs/2604.10299)
@@ -20,7 +20,7 @@
 
 ---
 
-## 💡 Overview
+## Overview
 
 This repository contains the official implementation of **Attention-Guided Visual Jailbreaking**. 
 
@@ -32,7 +32,7 @@ LVLMs continuously retrieve safety instructions through their attention mechanis
   <em>Figure 1: Illustration of our Attention-Guided Visual Jailbreaking framework.</em>
 </p>
 
-## 🏆 Key Results
+## Key Results
 
 Our method consistently outperforms output-oriented baselines across multiple challenging safety benchmarks.
 
@@ -46,12 +46,12 @@ Our method consistently outperforms output-oriented baselines across multiple ch
 
 ---
 
-## 🧠 Core Method: Push-Pull Attention Loss
+## Core Method: Push-Pull Attention Loss
 
 The adversarial optimization is driven by a simple yet highly effective **Push-Pull** dynamic:
 
-1. 🔴 **SUPPRESS (Push):** Reduce attention from generated tokens to system prompt tokens (blinding the model to safety rules).
-2. 🟢 **AMPLIFY (Pull):** Increase attention from generated tokens to adversarial image tokens (anchoring the generation).
+1. **SUPPRESS (Push):** Reduce attention from generated tokens to system prompt tokens (blinding the model to safety rules).
+2. **AMPLIFY (Pull):** Increase attention from generated tokens to adversarial image tokens (anchoring the generation).
 
 $$\mathcal{L}_{\text{attn}} = \alpha \cdot \underbrace{\frac{1}{|\mathcal{T}|} \sum_{i \in \mathcal{T}} \sum_{j \in \mathcal{S}} A_{ij}}_{\text{Push: target} \to \text{system}} - \beta \cdot \underbrace{\frac{1}{|\mathcal{T}|} \sum_{i \in \mathcal{T}} \sum_{j \in \mathcal{V}} A_{ij}}_{\text{Pull: target} \to \text{image}}$$
 
@@ -59,7 +59,7 @@ Where $\mathcal{T}$, $\mathcal{S}$, and $\mathcal{V}$ denote the sets of target 
 
 ---
 
-## ⚙️ Installation
+## Installation
 
 **1. Clone the repository**
 ```bash
@@ -86,7 +86,7 @@ pip install -r requirements.txt
 
 -----
 
-## 🚀 Quick Start
+## Quick Start
 
 ### 1\. Generate Adversarial Examples (Attack)
 
@@ -154,7 +154,7 @@ python evaluation/evaluate.py \
     --model_name "LLaVA-1.5"
 ```
 
-### ⚡ One-Click Pipeline
+### One-Click Pipeline
 
 To run the end-to-end pipeline (Attack -\> Generate -\> Evaluate):
 
@@ -169,7 +169,7 @@ bash scripts/run_pipeline.sh \
 
 -----
 
-## 🛠️ Key Hyperparameters
+## Key Hyperparameters
 
 | Parameter | Default | Description |
 | :--- | :---: | :--- |
@@ -181,7 +181,7 @@ bash scripts/run_pipeline.sh \
 
 -----
 
-## 📁 Repository Structure
+## Repository Structure
 
 ```text
 AttentionJailbreak/
@@ -204,13 +204,13 @@ AttentionJailbreak/
 
 -----
 
-## 🤝 Acknowledgements
+## Acknowledgements
 
 This work builds upon and extends [Visual Adversarial Examples Jailbreak Large Language Models](https://github.com/Unispac/Visual-Adversarial-Examples-Jailbreak-Large-Language-Models) by [@Unispac](https://github.com/Unispac), which serves as our baseline. We thank the authors for their pioneering work on visual adversarial attacks against VLMs.
 
 -----
 
-## 📜 Citation
+## Citation
 
 If you find our work or this code useful in your research, please consider citing our paper:
 
@@ -237,7 +237,7 @@ If you find our work or this code useful in your research, please consider citin
 
 -----
 
-## ⚠️ Disclaimer
+## Disclaimer
 
 > This repository contains code for generating adversarial examples that can bypass the safety alignments of Large Vision-Language Models. This project is released for **academic research purposes only** to advance the understanding of VLM vulnerabilities and aid in developing stronger defenses. Any malicious or unethical use of the techniques demonstrated here is strictly prohibited.
 
