@@ -215,14 +215,23 @@ This work builds upon and extends [Visual Adversarial Examples Jailbreak Large L
 If you find our work or this code useful in your research, please consider citing our paper:
 
 ```bibtex
-@misc{li2026seeingevilblindinglarge,
-      title={Seeing No Evil: Blinding Large Vision-Language Models to Safety Instructions via Adversarial Attention Hijacking}, 
-      author={Jingru Li and Wei Ren and Tianqing Zhu},
-      year={2026},
-      eprint={2604.10299},
-      archivePrefix={arXiv},
-      primaryClass={cs.CV},
-      url={[https://arxiv.org/abs/2604.10299](https://arxiv.org/abs/2604.10299)}, 
+@inproceedings{li-etal-2026-seeing,
+    title = "Seeing No Evil: Blinding Large Vision-Language Models to Safety Instructions via Adversarial Attention Hijacking",
+    author = "Li, Jingru  and
+      Ren, Wei  and
+      Zhu, Tianqing",
+    editor = "Liakata, Maria  and
+      Moreira, Viviane P.  and
+      Zhang, Jiajun  and
+      Jurgens, David",
+    booktitle = "Proceedings of the 64th Annual Meeting of the {A}ssociation for {C}omputational {L}inguistics (Volume 1: Long Papers)",
+    month = jul,
+    year = "2026",
+    address = "San Diego, California, United States",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2026.acl-long.833/",
+    pages = "18304--18323",
+    ISBN = "979-8-89176-390-6"
 }
 ```
 
