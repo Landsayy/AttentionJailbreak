@@ -30,18 +30,6 @@ LVLMs continuously retrieve safety instructions through their attention mechanis
   <em>Figure 1: Illustration of our Attention-Guided Visual Jailbreaking framework.</em>
 </p>
 
-## Key Results
-
-Our method consistently outperforms output-oriented baselines across multiple challenging safety benchmarks.
-
-| Model | AdvBench | HarmBench | JailbreakBench | StrongREJECT |
-| :--- | :---: | :---: | :---: | :---: |
-| **Qwen-VL-Chat** | **94.4%** | **95.5%** | **90.4%** | **92.0%** |
-| **LLaVA-1.5-7B** | 77.5% | 78.0% | 84.0% | 84.0% |
-| **InternVL2-8B** | 18.3% | 17.5% | 19.0% | 15.3% |
-
-> *Note: Attack Success Rate (ASR) is evaluated using the Llama Guard 3 safety classifier.*
-
 ---
 
 ## Core Method: Push-Pull Attention Loss
@@ -176,29 +164,6 @@ bash scripts/run_pipeline.sh \
 | `--alpha_suppress` | `10.0` | Weight ($\alpha$) for pushing attention away from system prompts |
 | `--beta_amplify` | `5.0` | Weight ($\beta$) for pulling attention towards the image |
 | `--attn_layers` | `last-6` | The specific Transformer layers targeted for attention hijacking |
-
------
-
-## Repository Structure
-
-```text
-AttentionJailbreak/
-├── attack/
-│   └── attack.py              # Core implementation of the Push-Pull adversarial attack
-├── evaluation/
-│   ├── generate_responses.py  # Script to elicit responses using adversarial images
-│   └── evaluate.py            # Safety evaluation wrapper (Llama Guard, Detoxify)
-├── harmful_corpus/            # Benchmark datasets and target optimization texts
-│   ├── input_advbench.json
-│   ├── input_harmbench.json
-│   ├── input_jailbreakbench.json
-│   ├── input_strongreject.json
-│   └── derogatory_corpus.csv  
-├── images/                    # Sample clean input images
-├── scripts/                   # Bash scripts for automated end-to-end testing
-├── requirements.txt
-└── README.md
-```
 
 -----
 
